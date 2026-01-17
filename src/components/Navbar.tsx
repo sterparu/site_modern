@@ -17,6 +17,10 @@ export default function Navbar() {
         setMobileMenuOpen(!mobileMenuOpen);
     };
 
+    const handleLinkClick = () => {
+        setMobileMenuOpen(false);
+    };
+
     const currentLanguage = languages.find(l => l.code === language) || languages[0];
 
     // Close language dropdown when clicking outside
@@ -44,7 +48,7 @@ export default function Navbar() {
                 {/* Desktop Menu */}
                 <ul className={`${mobileMenuOpen ? 'flex' : 'hidden'} md:flex flex-col md:flex-row absolute md:relative top-full left-0 w-full md:w-auto bg-[#0056b3] md:bg-transparent shadow-xl md:shadow-none z-40 transition-all`}>
                     <li>
-                        <Link href="/" className="block text-[#ecf0f1] py-7 px-8 text-lg font-medium hover:bg-[#0056b3] transition-colors">
+                        <Link href="/" onClick={handleLinkClick} className="block text-[#ecf0f1] py-7 px-8 text-lg font-medium hover:bg-[#0056b3] transition-colors">
                             {t('nav.home')}
                         </Link>
                     </li>
@@ -53,9 +57,9 @@ export default function Navbar() {
                             {t('nav.organizare')}
                         </span>
                         <ul className="hidden group-hover:block absolute top-full left-0 bg-[#0056b3] min-w-[220px] shadow-xl py-2 z-50">
-                            <li><Link href="/organizare/arbitri" className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.organizare.arbitri')}</Link></li>
-                            <li><Link href="/organizare/uam" className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.organizare.uam')}</Link></li>
-                            <li><Link href="/organizare/standuri-comerciale" className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.organizare.standuri')}</Link></li>
+                            <li><Link href="/organizare/arbitri" onClick={handleLinkClick} className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.organizare.arbitri')}</Link></li>
+                            <li><Link href="/organizare/uam" onClick={handleLinkClick} className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.organizare.uam')}</Link></li>
+                            <li><Link href="/organizare/standuri-comerciale" onClick={handleLinkClick} className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.organizare.standuri')}</Link></li>
                         </ul>
                     </li>
                     <li className="relative group">
@@ -63,9 +67,9 @@ export default function Navbar() {
                             {t('nav.competitie')}
                         </span>
                         <ul className="hidden group-hover:block absolute top-full left-0 bg-[#0056b3] min-w-[220px] shadow-xl py-2 z-50">
-                            <li><Link href="/competitie/program" className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.competitie.program')}</Link></li>
-                            <li><Link href="/competitie/participanti" className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.competitie.participanti')}</Link></li>
-                            <li><Link href="/competitie/inregistrare" className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.competitie.inregistrare')}</Link></li>
+                            <li><Link href="/competitie/program" onClick={handleLinkClick} className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.competitie.program')}</Link></li>
+                            <li><Link href="/competitie/participanti" onClick={handleLinkClick} className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.competitie.participanti')}</Link></li>
+                            <li><Link href="/competitie/inregistrare" onClick={handleLinkClick} className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.competitie.inregistrare')}</Link></li>
                         </ul>
                     </li>
                     <li className="relative group">
@@ -73,9 +77,9 @@ export default function Navbar() {
                             {t('nav.informatii')}
                         </span>
                         <ul className="hidden group-hover:block absolute top-full left-0 bg-[#0056b3] min-w-[220px] shadow-xl py-2 z-50">
-                            <li><Link href="/informarii/stadion" className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.informatii.stadion')}</Link></li>
-                            <li><Link href="/informarii/cum-ajungi" className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.informatii.cumAjungi')}</Link></li>
-                            <li><Link href="/informarii/cazare" className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.informatii.cazare')}</Link></li>
+                            <li><Link href="/informarii/stadion" onClick={handleLinkClick} className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.informatii.stadion')}</Link></li>
+                            <li><Link href="/informarii/cum-ajungi" onClick={handleLinkClick} className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.informatii.cumAjungi')}</Link></li>
+                            <li><Link href="/informarii/cazare" onClick={handleLinkClick} className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.informatii.cazare')}</Link></li>
                         </ul>
                     </li>
                     <li className="relative group">
@@ -83,14 +87,14 @@ export default function Navbar() {
                             {t('nav.superselectie')}
                         </span>
                         <ul className="hidden group-hover:block absolute top-full left-0 bg-[#0056b3] min-w-[220px] shadow-xl py-2 z-50">
-                            <li><Link href="/superselectie" className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.superselectie.despre')}</Link></li>
-                            <li><Link href="/superselectie/program" className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.superselectie.program')}</Link></li>
-                            <li><Link href="/superselectie/participanti" className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.superselectie.participanti')}</Link></li>
-                            <li><Link href="/superselectie/rezultate" className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.superselectie.rezultate')}</Link></li>
+                            <li><Link href="/superselectie" onClick={handleLinkClick} className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.superselectie.despre')}</Link></li>
+                            <li><Link href="/superselectie/program" onClick={handleLinkClick} className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.superselectie.program')}</Link></li>
+                            <li><Link href="/superselectie/participanti" onClick={handleLinkClick} className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.superselectie.participanti')}</Link></li>
+                            <li><Link href="/superselectie/rezultate" onClick={handleLinkClick} className="block text-[#ecf0f1] py-3 px-5 hover:bg-[#003d82] hover:pl-6 transition-all">{t('nav.superselectie.rezultate')}</Link></li>
                         </ul>
                     </li>
                     <li>
-                        <Link href="/contact" className="block text-[#ecf0f1] py-7 px-8 text-lg font-medium hover:bg-[#0056b3] transition-colors">
+                        <Link href="/contact" onClick={handleLinkClick} className="block text-[#ecf0f1] py-7 px-8 text-lg font-medium hover:bg-[#0056b3] transition-colors">
                             {t('nav.contact')}
                         </Link>
                     </li>
