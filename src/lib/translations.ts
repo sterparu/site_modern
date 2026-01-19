@@ -22,6 +22,22 @@ export const translations: Record<string, Record<Language, string>> = {
     'nav.competitie.program': { ro: 'Program', en: 'Schedule', de: 'Programm', fr: 'Programme', pt: 'Programa', el: 'Πρόγραμμα', es: 'Programa', hu: 'Program' },
     'nav.competitie.participanti': { ro: 'Participanți', en: 'Participants', de: 'Teilnehmende', fr: 'Participants', pt: 'Participantes', el: 'Συμμετέχοντες', es: 'Participantes', hu: 'Résztvevők' },
     'nav.competitie.inregistrare': { ro: 'Înregistrare', en: 'Registration', de: 'Anmeldung', fr: 'Inscription', pt: 'Inscrição', el: 'Εγγραφή', es: 'Inscripción', hu: 'Regisztráció' },
+    'competitie.program.notice': {
+        ro: '*Momentan calendarul competitional nu este disponibil, imediat ce vom avea toate detaliile acesta va fi afisat',
+        en: '*Currently the competition calendar is not available, as soon as we have all the details it will be displayed',
+        de: '*Der Wettbewerbskalender ist derzeit nicht verfügbar, sobald wir alle Details haben, wird er angezeigt',
+        fr: '*Actuellement, le calendrier des compétitions n\'est pas disponible, dès que nous aurons tous les détails, il sera affiché',
+        pt: '*Atualmente, o calendário da competição não está disponível, assim que tivermos todos os detalhes, ele será exibido',
+        el: '*Προς το παρόν το ημερολόγιο του διαγωνισμού δεν είναι διαθέσιμο, μόλις έχουμε όλες τις λεπτομέρειες θα εμφανιστεί',
+        es: '*Actualmente el calendario de competición no está disponible, tan pronto como tengamos todos los detalles se mostrará',
+        hu: '*Jelenleg a versenynaptár nem elérhető, amint minden részlet meglesz, megjelenítjük'
+    },
+    'competitie.program.event.opening': { ro: 'Ceremonie de deschidere', en: 'Opening Ceremony', de: 'Eröffnungsfeier', fr: 'Cérémonie d\'ouverture', pt: 'Cerimônia de abertura', el: 'Τελετή έναρξης', es: 'Ceremonia de apertura', hu: 'Megnyitó ünnepség' },
+    'competitie.program.event.vet_control': { ro: 'Control Veterinar Categoria 1 & 2', en: 'Veterinary Control Category 1 & 2', de: 'Tierarztkontrolle Kategorie 1 & 2', fr: 'Contrôle vétérinaire Catégorie 1 & 2', pt: 'Controle Veterinário Categoria 1 & 2', el: 'Κτηνιατρικός έλεγχος Κατηγορίας 1 & 2', es: 'Control Veterinario Categoría 1 y 2', hu: 'Állatorvosi ellenőrzés 1. és 2. kategória' },
+    'competitie.program.event.cat_1_2': { ro: 'Categoria 1 & 2', en: 'Category 1 & 2', de: 'Kategorie 1 & 2', fr: 'Catégorie 1 & 2', pt: 'Categoria 1 & 2', el: 'Κατηγορία 1 & 2', es: 'Categoría 1 y 2', hu: '1. és 2. kategória' },
+    'competitie.program.event.super_selection': { ro: 'Super Selecție', en: 'Super Selection', de: 'Super Auswahl', fr: 'Super Sélection', pt: 'Super Seleção', el: 'Super Selection', es: 'Super Selección', hu: 'Szuper kiválasztás' },
+    'competitie.program.event.cat_3': { ro: 'Categoria 3', en: 'Category 3', de: 'Kategorie 3', fr: 'Catégorie 3', pt: 'Categoria 3', el: 'Κατηγορία 3', es: 'Categoría 3', hu: '3. kategória' },
+    'competitie.program.event.closing': { ro: 'Festivitate de încheiere', en: 'Closing Ceremony', de: 'Abschlusszeremonie', fr: 'Cérémonie de clôture', pt: 'Cerimônia de encerramento', el: 'Τελετή λήξης', es: 'Ceremonia de clausura', hu: 'Záróünnepség' },
     'nav.informatii': { ro: 'Informații', en: 'Information', de: 'Informationen', fr: 'Informations', pt: 'Informações', el: 'Πληροφορίες', es: 'Información', hu: 'Információk' },
     'nav.informatii.stadion': { ro: 'Stadion', en: 'Stadium', de: 'Stadion', fr: 'Stade', pt: 'Estádio', el: 'Στάδιο', es: 'Estadio', hu: 'Stadion' },
     'nav.informatii.cumAjungi': { ro: 'Cum ajungi', en: 'How to Get Here', de: 'Anreise', fr: 'Comment venir', pt: 'Como chegar', el: 'Πώς να φτάσετε', es: 'Cómo llegar', hu: 'Megközelítés' },
@@ -97,6 +113,68 @@ export const translations: Record<string, Record<Language, string>> = {
         es: '¡Quisiera desear una cálida bienvenida y éxito a todos los participantes!',
         hu: 'Szeretnék meleg üdvözletet és sok sikert kívánni minden résztvevőnek!'
     },
+    'home.mayor.heading': {
+        ro: 'Stimaţi concurenţi ai Campionatului Mondial FCI Mondioring 2026!',
+        en: 'Dear competitors of the FCI Mondioring World Championship 2026!',
+        de: 'Sehr geehrte Teilnehmer der FCI Mondioring Weltmeisterschaft 2026!',
+        fr: 'Chers concurrents du Championnat du Monde FCI Mondioring 2026 !',
+        pt: 'Caros concorrentes do Campeonato Mundial FCI Mondioring 2026!',
+        el: 'Αγαπητοί διαγωνιζόμενοι του Παγκοσμίου Πρωταθλήματος FCI Mondioring 2026!',
+        es: '¡Estimados competidores del Campeonato Mundial FCI Mondioring 2026!',
+        hu: 'Tisztelt versenyzők a 2026-os FCI Mondioring Világbajnokságon!'
+    },
+    'home.mayor.text.p1': {
+        ro: 'Vă salut şi vă felicit pentru performanța de a vă califica la cea mai importantă competiţie de mondioring din lume!',
+        en: 'I greet and congratulate you on the achievement of qualifying for the most important mondioring competition in the world!',
+        de: 'Ich grüße und gratuliere Ihnen zu der Leistung, sich für den wichtigsten Mondioring-Wettbewerb der Welt qualifiziert zu haben!',
+        fr: 'Je vous salue et vous félicite pour la performance de vous être qualifié pour la plus importante compétition de mondioring au monde !',
+        pt: 'Saúdo e parabenizo-vos pela conquista de se qualificarem para a competição de mondioring mais importante do mundo!',
+        el: 'Σας χαιρετώ και σας συγχαίρω για το επίτευγμα της πρόκρισης στον σημαντικότερο διαγωνισμό mondioring στον κόσμο!',
+        es: '¡Os saludo y felicito por el logro de clasificaros para la competición de mondioring más importante del mundo!',
+        hu: 'Üdvözlöm és gratulálok önöknek ahhoz a teljesítményhez, hogy kvalifikálták magukat a világ legfontosabb mondioring versenyére!'
+    },
+    'home.mayor.text.p2': {
+        ro: 'Aţi muncit mult şi aţi depus eforturi considerabile, iar noi, locuitorii oraşului Pecica, abia așteptăm să vă vedem pe teren.',
+        en: 'You have worked hard and made considerable efforts, and we, the residents of Pecica, can\'t wait to see you on the field.',
+        de: 'Sie haben hart gearbeitet und beträchtliche Anstrengungen unternommen, und wir, die Bewohner von Pecica, können es kaum erwarten, Sie auf dem Platz zu sehen.',
+        fr: 'Vous avez travaillé dur et fait des efforts considérables, et nous, les habitants de Pecica, avons hâte de vous voir sur le terrain.',
+        pt: 'Vocês trabalharam muito e fizeram esforços consideráveis, e nós, os moradores de Pecica, mal podemos esperar para vê-los em campo.',
+        el: 'Έχετε εργαστεί σκληρά και έχετε καταβάλει σημαντικές προσπάθειες, και εμείς, οι κάτοικοι της Pecica, ανυπομονούμε να σας δούμε στο γήπεδο.',
+        es: 'Habéis trabajado duro y realizado esfuerzos considerables, y nosotros, los habitantes de Pecica, estamos ansiosos por veros en el campo.',
+        hu: 'Keményen dolgoztak és jelentős erőfeszítéseket tettek, mi pedig, Pécska lakói, alig várjuk, hogy láthassuk önöket a pályán.'
+    },
+    'home.mayor.text.p3': {
+        ro: 'Salutări arbitrilor, care vor veni să departajeze concurenţii şi să se asigure ca toate probele campionatului mondial se vor desfăşura la cele mai înalte standarde şi în conformitate cu regulamentele.',
+        en: 'Greetings to the judges, who will come to judge the competitors and ensure that all world championship trials are conducted to the highest standards and in accordance with the regulations.',
+        de: 'Grüße an die Richter, die kommen werden, um die Wettbewerber zu beurteilen und sicherzustellen, dass alle Prüfungen der Weltmeisterschaft nach den höchsten Standards und in Übereinstimmung mit den Vorschriften durchgeführt werden.',
+        fr: 'Salutations aux juges, qui viendront départager les concurrents et s\'assurer que toutes les épreuves du championnat du monde se dérouleront selon les normes les plus élevées et conformément aux règlements.',
+        pt: 'Saudações aos juízes, que virão para julgar os concorrentes e garantir que todas as provas do campeonato mundial sejam realizadas com os mais altos padrões e de acordo com os regulamentos.',
+        el: 'Χαιρετισμούς στους κριτές, που θα έρθουν να κρίνουν τους διαγωνιζόμενους και να διασφαλίσουν ότι όλες οι δοκιμασίες του παγκοσμίου πρωταθλήματος διεξάγονται με τα υψηλότερα πρότυπα και σύμφωνα με τους κανονισμούς.',
+        es: 'Saludos a los jueces, que vendrán a juzgar a los competidores y asegurar que todas las pruebas del campeonato mundial se realicen con los más altos estándares y de acuerdo con los reglamentos.',
+        hu: 'Üdvözlet a bíróknak, akik eljönnek, hogy elbírálják a versenyzőket és biztosítsák, hogy a világbajnokság minden próbája a legmagasabb színvonalon és a szabályzatnak megfelelően zajlajon.'
+    },
+    'home.mayor.text.p4': {
+        ro: 'Mulţumiri tuturor organizatorilor şi sponsorilor, care au în suflet mondioringul şi fac tot posibilul, pentru ca principala competiţie a acestei ramuri sportive să se desfăşoare în condiţii excelente!',
+        en: 'Thanks to all organizers and sponsors, who have mondioring in their hearts and do their best ensuring that the main competition of this sport takes place in excellent conditions!',
+        de: 'Dank an alle Organisatoren und Sponsoren, die Mondioring im Herzen tragen und ihr Bestes geben, damit der Hauptwettbewerb dieser Sportart unter hervorragenden Bedingungen stattfindet!',
+        fr: 'Merci à tous les organisateurs et sponsors, qui ont le mondioring à cœur et font de leur mieux pour que la compétition principale de ce sport se déroule dans d\'excellentes conditions !',
+        pt: 'Obrigado a todos os organizadores e patrocinadores, que têm o mondioring no coração e fazem o seu melhor para que a principal competição deste esporte ocorra em excelentes condições!',
+        el: 'Ευχαριστίες σε όλους τους διοργανωτές και χορηγούς, που έχουν το mondioring στην καρδιά τους και κάνουν ό,τι καλύτερο μπορούν για να διεξαχθεί ο κύριος διαγωνισμός αυτού του αθλήματος σε άριστες συνθήκες!',
+        es: '¡Gracias a todos los organizadores y patrocinadores, que llevan el mondioring en el corazón y hacen todo lo posible para que la competición principal de este deporte se desarrolle en excelentes condiciones!',
+        hu: 'Köszönet minden szervezőnek és szponzornak, akik szívükben viselik a mondioringot, és mindent megtesznek annak érdekében, hogy e sportág fő versenye kiváló körülmények között kerüljön megrendezésre!'
+    },
+    'home.mayor.text.p5': {
+        ro: 'Vă aşteptăm, cu drag, la Pecica şi vă asigurăm că şi noi, autorităţile locale, suntem pregătiţi pe deplin pentru a vă asigura toate cele necesare pentru un eveniment sportiv de prim rang!',
+        en: 'We look forward to welcoming you to Pecica and assure you that we, the local authorities, are fully prepared to provide everything necessary for a top-class sporting event!',
+        de: 'Wir freuen uns darauf, Sie in Pecica willkommen zu heißen und versichern Ihnen, dass wir, die lokalen Behörden, bestens vorbereitet sind, um alles Notwendige für ein erstklassiges Sportereignis zu bieten!',
+        fr: 'Nous vous attendons avec impatience à Pecica et vous assurons que nous, les autorités locales, sommes pleinement préparés pour vous fournir tout le nécessaire pour un événement sportif de premier rang !',
+        pt: 'Esperamos ansiosamente recebê-los em Pecica e garantimos que nós, as autoridades locais, estamos totalmente preparados para fornecer tudo o que é necessário para um evento esportivo de primeira classe!',
+        el: 'Ανυπομονούμε να σας καλωσορίσουμε στην Pecica και σας διαβεβαιώνουμε ότι εμείς, οι τοπικές αρχές, είμαστε πλήρως προετοιμασμένοι να παρέχουμε όλα τα απαραίτητα για ένα αθλητικό γεγονός υψηλού επιπέδου!',
+        es: '¡Os esperamos con cariño en Pecica y os aseguramos que nosotros, las autoridades locales, estamos plenamente preparados para proporcionar todo lo necesario para un evento deportivo de primer nivel!',
+        hu: 'Szeretettel várjuk önöket Pécskán, és biztosítjuk önöket, hogy mi, a helyi hatóságok, teljes mértékben felkészültünk arra, hogy mindent biztosítsunk egy elsőrangú sporteseményhez!'
+    },
+    'home.mayor.name': { ro: 'Petru Antal', en: 'Petru Antal', de: 'Petru Antal', fr: 'Petru Antal', pt: 'Petru Antal', el: 'Petru Antal', es: 'Petru Antal', hu: 'Petru Antal' },
+    'home.mayor.role': { ro: 'Primar Pecica', en: 'Mayor of Pecica', de: 'Bürgermeister von Pecica', fr: 'Maire de Pecica', pt: 'Prefeito de Pecica', el: 'Δήμαρχος Pecica', es: 'Alcalde de Pecica', hu: 'Pécska Polgármestere' },
     'home.sponsors.title': { ro: 'Sponsori', en: 'Sponsors', de: 'Sponsoren', fr: 'Sponsors', pt: 'Patrocinadores', el: 'Χορηγοί', es: 'Patrocinadores', hu: 'Szponzorok' },
 
     // Registration
@@ -128,28 +206,18 @@ export const translations: Record<string, Record<Language, string>> = {
     'contact.info.title': { ro: 'Informații de Contact', en: 'Contact Information', de: 'Kontaktinformationen', fr: 'Informations de Contact', pt: 'Informações de Contato', el: 'Πληροφορίες Επικοινωνίας', es: 'Información de Contacto', hu: 'Elérhetőségek' },
     'contact.info.location.title': { ro: 'Locația Evenimentului', en: 'Event Location', de: 'Veranstaltungsort', fr: 'Lieu de l\'événement', pt: 'Local do Evento', el: 'Τοποθεσία Εκδήλωσης', es: 'Ubicación del Evento', hu: 'Esemény Helyszíne' },
     'contact.info.location.text': {
-        ro: 'Jucu Arena<br>Orașul Pecica, Județul Arad<br>România',
-        en: 'Jucu Arena<br>Pecica City, Arad County<br>Romania',
-        de: 'Jucu Arena<br>Stadt Pecica, Kreis Arad<br>Rumänien',
-        fr: 'Jucu Arena<br>Ville de Pecica, Comté d\'Arad<br>Roumanie',
-        pt: 'Jucu Arena<br>Cidade de Pecica, Condado de Arad<br>Romênia',
-        el: 'Jucu Arena<br>Πόλη Pecica, Κομητεία Arad<br>Ρουμανία',
-        es: 'Jucu Arena<br>Ciudad de Pecica, Condado de Arad<br>Rumanía',
-        hu: 'Jucu Aréna<br>Pécska Város, Arad Megye<br>Románia'
+        ro: 'Stadionul Progresul<br>Orașul Pecica, Județul Arad<br>România',
+        en: 'Progresul Stadium<br>Pecica City, Arad County<br>Romania',
+        de: 'Progresul Stadion<br>Stadt Pecica, Kreis Arad<br>Rumänien',
+        fr: 'Stade Progresul<br>Ville de Pecica, Comté d\'Arad<br>Roumanie',
+        pt: 'Estádio Progresul<br>Cidade de Pecica, Condado de Arad<br>Romênia',
+        el: 'Στάδιο Progresul<br>Πόλη Pecica, Κομητεία Arad<br>Ρουμανία',
+        es: 'Estadio Progresul<br>Ciudad de Pecica, Condado de Arad<br>Rumanía',
+        hu: 'Progresul Stadion<br>Pécska Város, Arad Megye<br>Románia'
     },
     'contact.info.phone.title': { ro: 'Telefon', en: 'Phone', de: 'Telefon', fr: 'Téléphone', pt: 'Telefone', el: 'Τηλέφωνο', es: 'Teléfono', hu: 'Telefon' },
     'contact.info.email.title': { ro: 'Email', en: 'Email', de: 'E-Mail', fr: 'Email', pt: 'Email', el: 'Email', es: 'Email', hu: 'Email' },
-    'contact.info.schedule.title': { ro: 'Program', en: 'Schedule', de: 'Öffnungszeiten', fr: 'Horaires', pt: 'Horário', el: 'Ωράριο', es: 'Horario', hu: 'Nyitvatartás' },
-    'contact.info.schedule.text': {
-        ro: 'Luni - Vineri: 09:00 - 18:00<br>Sâmbătă - Duminică: 10:00 - 16:00',
-        en: 'Monday - Friday: 09:00 - 18:00<br>Saturday - Sunday: 10:00 - 16:00',
-        de: 'Montag - Freitag: 09:00 - 18:00<br>Samstag - Sonntag: 10:00 - 16:00',
-        fr: 'Lundi - Vendredi: 09:00 - 18:00<br>Samedi - Dimanche: 10:00 - 16:00',
-        pt: 'Segunda - Sexta: 09:00 - 18:00<br>Sábado - Domingo: 10:00 - 16:00',
-        el: 'Δευτέρα - Παρασκευή: 09:00 - 18:00<br>Σάββατο - Κυριακή: 10:00 - 16:00',
-        es: 'Lunes - Viernes: 09:00 - 18:00<br>Sábado - Domingo: 10:00 - 16:00',
-        hu: 'Hétfő - Péntek: 09:00 - 18:00<br>Szombat - Vasárnap: 10:00 - 16:00'
-    },
+
     'contact.form.title': { ro: 'Trimite-ne un mesaj', en: 'Send us a message', de: 'Senden Sie uns eine Nachricht', fr: 'Envoyez-nous un message', pt: 'Envie-nos uma mensagem', el: 'Στείλτε μας ένα μήνυμα', es: 'Envíanos un mensaje', hu: 'Küldjön üzenetet' },
     'contact.form.nume': { ro: 'Nume', en: 'Last Name', de: 'Nachname', fr: 'Nom', pt: 'Sobrenome', el: 'Επώνυμο', es: 'Apellido', hu: 'Vezetéknév' },
     'contact.form.prenume': { ro: 'Prenume', en: 'First Name', de: 'Vorname', fr: 'Prénom', pt: 'Nome', el: 'Όνομα', es: 'Nombre', hu: 'Keresztnév' },
@@ -158,8 +226,12 @@ export const translations: Record<string, Record<Language, string>> = {
     'contact.form.submit': { ro: 'Trimite mesajul', en: 'Send message', de: 'Nachricht senden', fr: 'Envoyer le message', pt: 'Enviar mensagem', el: 'Αποστολή μηνύματος', es: 'Enviar mensaje', hu: 'Üzenet küldése' },
 
     // Organizare - Arbitri
+    'organizare.arbitri.cat12': { ro: 'Categoria 1 & 2', en: 'Category 1 & 2', de: 'Kategorie 1 & 2', fr: 'Catégorie 1 & 2', pt: 'Categoria 1 & 2', el: 'Κατηγορία 1 & 2', es: 'Categoría 1 y 2', hu: '1. és 2. kategória' },
+    'organizare.arbitri.cat3': { ro: 'Categoria 3', en: 'Category 3', de: 'Kategorie 3', fr: 'Catégorie 3', pt: 'Categoria 3', el: 'Κατηγορία 3', es: 'Categoría 3', hu: '3. kategória' },
+    'organizare.arbitri.supervisor': { ro: 'Supraveghetor Competiție', en: 'Competition Supervisor', de: 'Wettbewerbsaufseher', fr: 'Superviseur de Compétition', pt: 'Supervisor de Competição', el: 'Επόπτης Διαγωνισμού', es: 'Supervisor de Competición', hu: 'Versenyfelügyelő' },
+
     'organizare.arbitri.card1.photo': { ro: 'Foto Arbitru 1', en: 'Judge Photo 1', de: 'Schiedsrichter Foto 1', fr: 'Photo Arbitre 1', pt: 'Foto Juiz 1', el: 'Φωτογραφία Κριτή 1', es: 'Foto Juez 1', hu: 'Bíró Fotó 1' },
-    'organizare.arbitri.card1.name': { ro: 'Nume Arbitru 1', en: 'Judge Name 1', de: 'Schiedsrichter Name 1', fr: 'Nom Arbitre 1', pt: 'Nome Juiz 1', el: 'Όνομα Κριτή 1', es: 'Nombre Juez 1', hu: 'Bíró Név 1' },
+    'organizare.arbitri.card1.name': { ro: 'Arbitru 1', en: 'Judge 1', de: 'Schiedsrichter 1', fr: 'Arbitre 1', pt: 'Juiz 1', el: 'Κριτής 1', es: 'Juez 1', hu: 'Bíró 1' },
     'organizare.arbitri.card1.bio': {
         ro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         en: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -170,22 +242,25 @@ export const translations: Record<string, Record<Language, string>> = {
         es: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         hu: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
     },
-    // ... Repeat for 2-6 (using simpler generic fallback for now to save space, but ideally distinct)
     'organizare.arbitri.card2.photo': { ro: 'Foto Arbitru 2', en: 'Judge Photo 2', de: 'Schiedsrichter Foto 2', fr: 'Photo Arbitre 2', pt: 'Foto Juiz 2', el: 'Φωτογραφία Κριτή 2', es: 'Foto Juez 2', hu: 'Bíró Fotó 2' },
-    'organizare.arbitri.card2.name': { ro: 'Nume Arbitru 2', en: 'Judge Name 2', de: 'Schiedsrichter Name 2', fr: 'Nom Arbitre 2', pt: 'Nome Juiz 2', el: 'Όνομα Κριτή 2', es: 'Nombre Juez 2', hu: 'Bíró Név 2' },
+    'organizare.arbitri.card2.name': { ro: 'Arbitru 2', en: 'Judge 2', de: 'Schiedsrichter 2', fr: 'Arbitre 2', pt: 'Juiz 2', el: 'Κριτής 2', es: 'Juez 2', hu: 'Bíró 2' },
     'organizare.arbitri.card2.bio': { ro: 'Duis aute irure dolor in reprehenderit.', en: 'Duis aute irure dolor in reprehenderit.', de: 'Duis aute irure dolor in reprehenderit.', fr: 'Duis aute irure dolor in reprehenderit.', pt: 'Duis aute irure dolor in reprehenderit.', el: 'Duis aute irure dolor in reprehenderit.', es: 'Duis aute irure dolor in reprehenderit.', hu: 'Duis aute irure dolor in reprehenderit.' },
     'organizare.arbitri.card3.photo': { ro: 'Foto Arbitru 3', en: 'Judge Photo 3', de: 'Schiedsrichter Foto 3', fr: 'Photo Arbitre 3', pt: 'Foto Juiz 3', el: 'Φωτογραφία Κριτή 3', es: 'Foto Juez 3', hu: 'Bíró Fotó 3' },
-    'organizare.arbitri.card3.name': { ro: 'Nume Arbitru 3', en: 'Judge Name 3', de: 'Schiedsrichter Name 3', fr: 'Nom Arbitre 3', pt: 'Nome Juiz 3', el: 'Όνομα Κριτή 3', es: 'Nombre Juez 3', hu: 'Bíró Név 3' },
+    'organizare.arbitri.card3.name': { ro: 'Arbitru 3', en: 'Judge 3', de: 'Schiedsrichter 3', fr: 'Arbitre 3', pt: 'Juiz 3', el: 'Κριτής 3', es: 'Juez 3', hu: 'Bíró 3' },
     'organizare.arbitri.card3.bio': { ro: 'Sed ut perspiciatis unde omnis iste.', en: 'Sed ut perspiciatis unde omnis iste.', de: 'Sed ut perspiciatis unde omnis iste.', fr: 'Sed ut perspiciatis unde omnis iste.', pt: 'Sed ut perspiciatis unde omnis iste.', el: 'Sed ut perspiciatis unde omnis iste.', es: 'Sed ut perspiciatis unde omnis iste.', hu: 'Sed ut perspiciatis unde omnis iste.' },
     'organizare.arbitri.card4.photo': { ro: 'Foto Arbitru 4', en: 'Judge Photo 4', de: 'Schiedsrichter Foto 4', fr: 'Photo Arbitre 4', pt: 'Foto Juiz 4', el: 'Φωτογραφία Κριτή 4', es: 'Foto Juez 4', hu: 'Bíró Fotó 4' },
-    'organizare.arbitri.card4.name': { ro: 'Nume Arbitru 4', en: 'Judge Name 4', de: 'Schiedsrichter Name 4', fr: 'Nom Arbitre 4', pt: 'Nome Juiz 4', el: 'Όνομα Κριτή 4', es: 'Nombre Juez 4', hu: 'Bíró Név 4' },
+    'organizare.arbitri.card4.name': { ro: 'Arbitru 4', en: 'Judge 4', de: 'Schiedsrichter 4', fr: 'Arbitre 4', pt: 'Juiz 4', el: 'Κριτής 4', es: 'Juez 4', hu: 'Bíró 4' },
     'organizare.arbitri.card4.bio': { ro: 'Nemo enim ipsam voluptatem quia.', en: 'Nemo enim ipsam voluptatem quia.', de: 'Nemo enim ipsam voluptatem quia.', fr: 'Nemo enim ipsam voluptatem quia.', pt: 'Nemo enim ipsam voluptatem quia.', el: 'Nemo enim ipsam voluptatem quia.', es: 'Nemo enim ipsam voluptatem quia.', hu: 'Nemo enim ipsam voluptatem quia.' },
     'organizare.arbitri.card5.photo': { ro: 'Foto Arbitru 5', en: 'Judge Photo 5', de: 'Schiedsrichter Foto 5', fr: 'Photo Arbitre 5', pt: 'Foto Juiz 5', el: 'Φωτογραφία Κριτή 5', es: 'Foto Juez 5', hu: 'Bíró Fotó 5' },
-    'organizare.arbitri.card5.name': { ro: 'Nume Arbitru 5', en: 'Judge Name 5', de: 'Schiedsrichter Name 5', fr: 'Nom Arbitre 5', pt: 'Nome Juiz 5', el: 'Όνομα Κριτή 5', es: 'Nombre Juez 5', hu: 'Bíró Név 5' },
+    'organizare.arbitri.card5.name': { ro: 'Arbitru 5', en: 'Judge 5', de: 'Schiedsrichter 5', fr: 'Arbitre 5', pt: 'Juiz 5', el: 'Κριτής 5', es: 'Juez 5', hu: 'Bíró 5' },
     'organizare.arbitri.card5.bio': { ro: 'Consectetur adipiscing elit.', en: 'Consectetur adipiscing elit.', de: 'Consectetur adipiscing elit.', fr: 'Consectetur adipiscing elit.', pt: 'Consectetur adipiscing elit.', el: 'Consectetur adipiscing elit.', es: 'Consectetur adipiscing elit.', hu: 'Consectetur adipiscing elit.' },
     'organizare.arbitri.card6.photo': { ro: 'Foto Arbitru 6', en: 'Judge Photo 6', de: 'Schiedsrichter Foto 6', fr: 'Photo Arbitre 6', pt: 'Foto Juiz 6', el: 'Φωτογραφία Κριτή 6', es: 'Foto Juez 6', hu: 'Bíró Fotó 6' },
-    'organizare.arbitri.card6.name': { ro: 'Nume Arbitru 6', en: 'Judge Name 6', de: 'Schiedsrichter Name 6', fr: 'Nom Arbitre 6', pt: 'Nome Juiz 6', el: 'Όνομα Κριτή 6', es: 'Nombre Juez 6', hu: 'Bíró Név 6' },
+    'organizare.arbitri.card6.name': { ro: 'Arbitru 6', en: 'Judge 6', de: 'Schiedsrichter 6', fr: 'Arbitre 6', pt: 'Juiz 6', el: 'Κριτής 6', es: 'Juez 6', hu: 'Bíró 6' },
     'organizare.arbitri.card6.bio': { ro: 'Excepteur sint occaecat cupidatat.', en: 'Excepteur sint occaecat cupidatat.', de: 'Excepteur sint occaecat cupidatat.', fr: 'Excepteur sint occaecat cupidatat.', pt: 'Excepteur sint occaecat cupidatat.', el: 'Excepteur sint occaecat cupidatat.', es: 'Excepteur sint occaecat cupidatat.', hu: 'Excepteur sint occaecat cupidatat.' },
+
+    'organizare.arbitri.card7.photo': { ro: 'Foto Supraveghetor', en: 'Supervisor Photo', de: 'Aufseher Foto', fr: 'Photo Superviseur', pt: 'Foto Supervisor', el: 'Φωτογραφία Επόπτη', es: 'Foto Supervisor', hu: 'Felügyelő Fotó' },
+    'organizare.arbitri.card7.name': { ro: 'Supraveghetor', en: 'Supervisor', de: 'Aufseher', fr: 'Superviseur', pt: 'Supervisor', el: 'Επόπτης', es: 'Supervisor', hu: 'Felügyelő' },
+    'organizare.arbitri.card7.bio': { ro: '', en: '', de: '', fr: '', pt: '', el: '', es: '', hu: '' },
 
     // Informatii - Stadion
     'info.stadium.legend': { ro: 'Legendă stadion', en: 'Stadium Legend', de: 'Stadionlegende', fr: 'Légende du stade', pt: 'Legenda do estádio', el: 'Υπόμνημα σταδίου', es: 'Leyenda del estadio', hu: 'Stadion jelmagyarázat' },
@@ -207,6 +282,39 @@ export const translations: Record<string, Record<Language, string>> = {
         el: 'Για να φτάσετε στο στάδιο Progresul Pecica...',
         es: 'Para llegar al Estadio Progresul Pecica...',
         hu: 'A Progresul Pecica Stadionhoz való eljutáshoz...'
+    },
+
+    // Accommodation
+    'accommodation.camper.title': { ro: 'Zonă Camping', en: 'Camping Area', de: 'Campingplatz', fr: 'Zone de Camping', pt: 'Área de Camping', el: 'Χώρος Κάμπινγκ', es: 'Zona de Camping', hu: 'Kemping Terület' },
+    'accommodation.camper.description': {
+        ro: 'Putem oferi zonă pentru campere.',
+        en: 'We can offer an area for campers.',
+        de: 'Wir können einen Bereich für Wohnmobile anbieten.',
+        fr: 'Nous pouvons offrir une zone pour les camping-cars.',
+        pt: 'Podemos oferecer uma área para motorhomes.',
+        el: 'Μπορούμε να προσφέρουμε χώρο για τροχόσπιτα.',
+        es: 'Podemos ofrecer zona para autocaravanas.',
+        hu: 'Lakóautóknak tudunk helyet biztosítani.'
+    },
+    'accommodation.camper.facility': {
+        ro: 'Singura facilitate disponibilă este curentul electric.',
+        en: 'The only facility available is electricity.',
+        de: 'Die einzige verfügbare Einrichtung ist Strom.',
+        fr: 'La seule facilité disponible est l\'électricité.',
+        pt: 'A única facilidade disponível é a eletricidade.',
+        el: 'Η μόνη διαθέσιμη παροχή είναι το ηλεκτρικό ρεύμα.',
+        es: 'La única facilidad disponible es la electricidad.',
+        hu: 'Az egyetlen elérhető szolgáltatás az elektromos áram.'
+    },
+    'accommodation.camper.contact': {
+        ro: 'Pentru detalii, vă rugăm să luați legătura cu numărul de la contact.',
+        en: 'For details, please contact the number listed in the contact section.',
+        de: 'Für Details wenden Sie sich bitte an die Nummer im Kontaktbereich.',
+        fr: 'Pour plus de détails, veuillez contacter le numéro indiqué dans la section contact.',
+        pt: 'Para detalhes, entre em contato com o número listado na seção de contato.',
+        el: 'Για λεπτομέρειες, παρακαλούμε επικοινωνήστε με τον αριθμό που αναφέρεται στην ενότητα επικοινωνίας.',
+        es: 'Para más detalles, póngase en contacto con el número que figura en la sección de contacto.',
+        hu: 'Részletekért kérjük, vegye fel a kapcsolatot a kapcsolat menüpontban található telefonszámmal.'
     },
 
     // Global

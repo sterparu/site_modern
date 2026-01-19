@@ -64,18 +64,15 @@ export default function ContactPage() {
 
                         <div>
                             <h3 className="text-[#d4af37] font-semibold text-lg mb-2">{t('contact.info.phone.title')}</h3>
-                            <p className="opacity-90">+40 XXX XXX XXX</p>
+                            <p className="opacity-90">+40 741 952 880</p>
                         </div>
 
                         <div>
                             <h3 className="text-[#d4af37] font-semibold text-lg mb-2">{t('contact.info.email.title')}</h3>
-                            <p className="opacity-90">contact@site-prezentare.ro</p>
+                            <p className="opacity-90">mondioringroexams@gmail.com</p>
                         </div>
 
-                        <div>
-                            <h3 className="text-[#d4af37] font-semibold text-lg mb-2">{t('contact.info.schedule.title')}</h3>
-                            <p className="opacity-90" dangerouslySetInnerHTML={{ __html: t('contact.info.schedule.text') }}></p>
-                        </div>
+
                     </div>
                 </div>
 
