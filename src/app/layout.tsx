@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Hero from '@/components/Hero';
 import { LanguageProvider } from '@/context/LanguageContext';
 
 export const metadata: Metadata = {
@@ -19,17 +20,7 @@ export default function RootLayout({
             <body>
                 <LanguageProvider>
                     <Navbar />
-                    <div className="w-full bg-white relative">
-                        <div className="max-w-[1200px] mx-auto px-4 py-4 md:py-6">
-                            <div className="relative w-full h-[120px] md:h-[180px] flex justify-center">
-                                <img
-                                    src="/images/wc-logo.jpeg"
-                                    alt="World Championship Logo"
-                                    className="h-full w-auto object-contain"
-                                />
-                            </div>
-                        </div>
-                    </div>
+                    <Hero />
                     <main className="min-h-screen">
                         {children}
                     </main>
