@@ -83,7 +83,25 @@ export const uamMembers: UamMember[] = [
         image: "/images/uam/alexandru_davidescu.png",
         content: {
             ro: [
-                { type: 'paragraph', text: "Sunt Alex Davidescu, decoy internațional de Mondioring..." }
+                { type: 'paragraph', text: "Sunt Alex Davidescu, decoy internațional de Mondioring, activ pe scena sportului canin. Din 2009 reprezint România la cel mai înalt nivel în calitate de decoy si conductor canin, contribuind la formarea mai multor decoy si echipe canine." },
+                { type: 'paragraph', text: "Am avut onoarea să fiu selectat și să lucrez în competiții și selecții internaționale, inclusiv:" },
+                {
+                    type: 'list', items: [
+                        "Decoy la Campionatul Mondial FMBB 2023",
+                        "Am participat la mai multe selecți internațional în Belgia (2016), Rusia (2018), România (2021 – locul 5), Grecia (2024) Italia (2025)",
+                        "Experiență extinsă în Mondioring și IPO, cu participări la campionate naționale și mondiale"
+                    ]
+                },
+                { type: 'paragraph', text: "Misiunea mea este să ofer un test corect, tehnic și sportiv, punând în valoare curajul, claritatea și instinctele câinelui, respectând în același timp siguranța și spiritul competiției. Principiile mele sunt:" },
+                {
+                    type: 'list', items: [
+                        "✅ respect pentru câine și sport",
+                        "✅ tehnică, precizie și neutralitate",
+                        "✅ intensitate, dinamism și control",
+                        "✅ contribuția la dezvoltarea sportului, atât în România cât și internațional"
+                    ]
+                },
+                { type: 'paragraph', text: "Mondioring nu este doar o competiție — este o cultură a excelenței. Iar rolul decoy-ului este să o susțină, să o ridice și să o reprezinte cu onoare." }
             ]
         }
     },
