@@ -20,12 +20,12 @@ export default function RootLayout({
                 <LanguageProvider>
                     <Navbar />
                     <div className="w-full bg-white relative">
-                        <div className="max-w-[1200px] mx-auto px-4 py-2">
-                            <div className="relative w-full h-[60px] md:h-[80px]">
+                        <div className="max-w-[1200px] mx-auto px-4 py-4 md:py-6">
+                            <div className="relative w-full h-[120px] md:h-[180px] flex justify-center">
                                 <img
                                     src="/images/wc-logo.jpeg"
                                     alt="World Championship Logo"
-                                    className="w-auto h-full object-contain"
+                                    className="h-full w-auto object-contain"
                                 />
                             </div>
                         </div>
