@@ -297,14 +297,24 @@ export const translations: Record<string, Record<Language, string>> = {
         hu: 'Lakóautóknak tudunk helyet biztosítani.'
     },
     'accommodation.camper.facility': {
-        ro: 'Singura facilitate disponibilă este curentul electric.',
-        en: 'The only facility available is electricity.',
-        de: 'Die einzige verfügbare Einrichtung ist Strom.',
-        fr: 'La seule facilité disponible est l\'électricité.',
-        pt: 'A única facilidade disponível é a eletricidade.',
-        el: 'Η μόνη διαθέσιμη παροχή είναι το ηλεκτρικό ρεύμα.',
-        es: 'La única facilidad disponible es la electricidad.',
-        hu: 'Az egyetlen elérhető szolgáltatás az elektromos áram.'
+        ro: 'Facilități disponibile: curent electric și dușuri.',
+        en: 'Available facilities: electricity and showers.',
+        de: 'Verfügbare Einrichtungen: Strom und Duschen.',
+        fr: 'Installations disponibles : électricité et douches.',
+        pt: 'Instalações disponíveis: eletricidade e chuveiros.',
+        el: 'Διαθέσιμες παροχές: ηλεκτρικό ρεύμα και ντους.',
+        es: 'Instalaciones disponibles: electricidad y duchas.',
+        hu: 'Elérhető szolgáltatások: elektromos áram és zuhanyzók.'
+    },
+    'accommodation.camper.price': {
+        ro: 'Preț: 30 Euro/zi',
+        en: 'Price: 30 Euro/day',
+        de: 'Preis: 30 Euro/Tag',
+        fr: 'Prix : 30 Euro/jour',
+        pt: 'Preço: 30 Euro/dia',
+        el: 'Τιμή: 30 Ευρώ/ημέρα',
+        es: 'Precio: 30 Euro/día',
+        hu: 'Ár: 30 Euro/nap'
     },
     'accommodation.camper.contact': {
         ro: 'Pentru detalii, vă rugăm să luați legătura cu numărul de la contact.',
