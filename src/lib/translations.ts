@@ -16,7 +16,7 @@ export const translations: Record<string, Record<Language, string>> = {
     'nav.home': { ro: 'Acasă', en: 'Home', de: 'Startseite', fr: 'Accueil', pt: 'Início', el: 'Αρχική', es: 'Inicio', hu: 'Kezdőlap' },
     'nav.organizare': { ro: 'Organizare', en: 'Organization', de: 'Organisation', fr: 'Organisation', pt: 'Organização', el: 'Οργάνωση', es: 'Organización', hu: 'Szervezés' },
     'nav.organizare.arbitri': { ro: 'Arbitri', en: 'Judges', de: 'Schiedsrichter', fr: 'Arbitres', pt: 'Juízes', el: 'Κριτές', es: 'Jueces', hu: 'Bírók' },
-    'nav.organizare.uam': { ro: 'UAM', en: 'UAM', de: 'UAM', fr: 'UAM', pt: 'UAM', el: 'UAM', es: 'UAM', hu: 'UAM' },
+    'nav.organizare.uam': { ro: 'Decoy', en: 'Decoy', de: 'Decoy', fr: 'Decoy', pt: 'Decoy', el: 'Decoy', es: 'Decoy', hu: 'Decoy' },
     'nav.organizare.standuri': { ro: 'Standuri Comerciale', en: 'Commercial Stands', de: 'Handelsstände', fr: 'Stands Commerciaux', pt: 'Stands Comerciais', el: 'Εμπορικά Περίπτερα', es: 'Stands Comerciales', hu: 'Kereskedelmi Standok' },
     'nav.competitie': { ro: 'Competiție', en: 'Competition', de: 'Wettbewerb', fr: 'Compétition', pt: 'Competição', el: 'Διαγωνισμός', es: 'Competición', hu: 'Verseny' },
     'nav.competitie.program': { ro: 'Program', en: 'Schedule', de: 'Programm', fr: 'Programme', pt: 'Programa', el: 'Πρόγραμμα', es: 'Programa', hu: 'Program' },
