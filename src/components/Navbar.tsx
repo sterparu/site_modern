@@ -8,10 +8,12 @@ import { useLanguage } from '@/context/LanguageContext';
 
 export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
+    const [desktopLanguageMenuOpen, setDesktopLanguageMenuOpen] = useState(false);
+    const [mobileLanguageMenuOpen, setMobileLanguageMenuOpen] = useState(false);
     const pathname = usePathname();
     const { t, language, setLanguage, languages } = useLanguage();
-    const languageDropdownRef = useRef<HTMLLIElement>(null);
+    const desktopLanguageDropdownRef = useRef<HTMLLIElement>(null);
+    const mobileLanguageDropdownRef = useRef<HTMLDivElement>(null);
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
@@ -23,11 +25,14 @@ export default function Navbar() {
 
     const currentLanguage = languages.find(l => l.code === language) || languages[0];
 
-    // Close language dropdown when clicking outside
+    // Close language dropdowns when clicking outside
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
-            if (languageDropdownRef.current && !languageDropdownRef.current.contains(event.target as Node)) {
-                setLanguageMenuOpen(false);
+            if (desktopLanguageDropdownRef.current && !desktopLanguageDropdownRef.current.contains(event.target as Node)) {
+                setDesktopLanguageMenuOpen(false);
+            }
+            if (mobileLanguageDropdownRef.current && !mobileLanguageDropdownRef.current.contains(event.target as Node)) {
+                setMobileLanguageMenuOpen(false);
             }
         }
         document.addEventListener("mousedown", handleClickOutside);
@@ -41,8 +46,6 @@ export default function Navbar() {
             <div className="max-w-[1200px] mx-auto px-5 min-h-[80px] flex justify-between items-center">
                 {/* Logos */}
                 <div className="flex gap-5 items-center">
-
-
                 </div>
 
                 {/* Desktop Menu */}
@@ -98,26 +101,26 @@ export default function Navbar() {
                             {t('nav.contact')}
                         </Link>
                     </li>
-                    {/* Language Switcher */}
-                    <li className="relative" ref={languageDropdownRef}>
+                    {/* Desktop Language Switcher - Hidden on Mobile */}
+                    <li className="relative hidden md:block" ref={desktopLanguageDropdownRef}>
                         <button
-                            onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
+                            onClick={() => setDesktopLanguageMenuOpen(!desktopLanguageMenuOpen)}
                             className="w-full md:w-auto flex items-center gap-2 text-[#ecf0f1] py-7 px-8 text-lg font-medium hover:bg-[#0056b3] transition-colors appearance-none bg-transparent border-none cursor-pointer focus:outline-none"
                         >
                             <span className="text-2xl">{currentLanguage.flag}</span>
                             <span>{currentLanguage.code.toUpperCase()}</span>
-                            <span className={`text-xs ml-1 transition-transform duration-200 ${languageMenuOpen ? 'rotate-180' : ''}`}>▼</span>
+                            <span className={`text-xs ml-1 transition-transform duration-200 ${desktopLanguageMenuOpen ? 'rotate-180' : ''}`}>▼</span>
                         </button>
 
                         {/* Dropdown */}
-                        {languageMenuOpen && (
+                        {desktopLanguageMenuOpen && (
                             <div className="absolute top-full right-0 mt-0 w-full md:w-56 bg-white rounded-b-xl shadow-2xl py-2 z-[60] overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
                                 {languages.map((lang) => (
                                     <button
                                         key={lang.code}
                                         onClick={() => {
                                             setLanguage(lang.code);
-                                            setLanguageMenuOpen(false);
+                                            setDesktopLanguageMenuOpen(false);
                                         }}
                                         className={`w-full text-left px-5 py-3 hover:bg-gray-100 flex items-center gap-3 transition-colors ${language === lang.code ? 'bg-gray-50 border-l-4 border-[#003d82]' : 'border-l-4 border-transparent'}`}
                                     >
@@ -163,12 +166,77 @@ export default function Navbar() {
                     </li>
                 </ul>
 
-                {/* Mobile Toggle */}
-                <button onClick={toggleMobileMenu} className="md:hidden flex flex-col gap-1.5 bg-transparent border-none cursor-pointer p-2 z-50">
-                    <span className={`block w-6 h-0.5 bg-white rounded-sm transition-all ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-                    <span className={`block w-6 h-0.5 bg-white rounded-sm transition-all ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
-                    <span className={`block w-6 h-0.5 bg-white rounded-sm transition-all ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-                </button>
+                {/* Mobile Right Actions: Language + Toggle */}
+                <div className="flex items-center gap-2 md:hidden">
+                    {/* Mobile Logos */}
+                    <div className="flex items-center gap-2 mr-1">
+                        <div className="relative w-8 h-8 bg-white/10 rounded-md p-0.5">
+                            <Image
+                                src="/images/logos/fc_fara_fundal.png"
+                                alt="FCI Logo"
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                        <div className="relative w-8 h-8 bg-white/10 rounded-md p-0.5">
+                            <Image
+                                src="/images/logos/achr.png"
+                                alt="ACHR Logo"
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                        <div className="relative w-8 h-8 bg-white/10 rounded-md p-0.5">
+                            <Image
+                                src="/images/logos/mondio3.png"
+                                alt="Mondio Logo"
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                    </div>
+
+                    {/* Mobile Language Switcher */}
+                    <div className="relative" ref={mobileLanguageDropdownRef}>
+                        <button
+                            onClick={() => setMobileLanguageMenuOpen(!mobileLanguageMenuOpen)}
+                            className="flex items-center gap-2 text-white bg-white/10 p-2 rounded-lg"
+                        >
+                            <span className="text-xl">{currentLanguage.flag}</span>
+                            <span className="text-sm font-bold">{currentLanguage.code.toUpperCase()}</span>
+                        </button>
+
+                        {/* Mobile Language Dropdown */}
+                        {mobileLanguageMenuOpen && (
+                            <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-xl shadow-2xl py-2 z-[70] overflow-hidden">
+                                {languages.map((lang) => (
+                                    <button
+                                        key={lang.code}
+                                        onClick={() => {
+                                            setLanguage(lang.code);
+                                            setMobileLanguageMenuOpen(false);
+                                        }}
+                                        className={`w-full text-left px-4 py-3 hover:bg-gray-100 flex items-center gap-3 transition-colors ${language === lang.code ? 'bg-gray-50 border-l-4 border-[#003d82]' : 'border-l-4 border-transparent'}`}
+                                    >
+                                        <span className="text-2xl">{lang.flag}</span>
+                                        <div className="flex flex-col">
+                                            <span className={`text-sm font-semibold ${language === lang.code ? 'text-[#003d82]' : 'text-gray-700'}`}>
+                                                {lang.name}
+                                            </span>
+                                        </div>
+                                    </button>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+
+                    {/* Mobile Toggle */}
+                    <button onClick={toggleMobileMenu} className="flex flex-col gap-1.5 bg-transparent border-none cursor-pointer p-2 z-50">
+                        <span className={`block w-6 h-0.5 bg-white rounded-sm transition-all ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+                        <span className={`block w-6 h-0.5 bg-white rounded-sm transition-all ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
+                        <span className={`block w-6 h-0.5 bg-white rounded-sm transition-all ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+                    </button>
+                </div>
             </div>
         </nav>
     );

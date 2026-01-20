@@ -15,8 +15,12 @@ const config: Config = {
             },
             colors: {
                 primary: '#003d82',
-                secondary: '#d4af37',
-            }
+                secondary: '#ff4500', // Updated to energetic red/orange
+            },
+            fontFamily: {
+                sans: ['Roboto', 'sans-serif'],
+                heading: ['Oswald', 'sans-serif'],
+            },
         },
     },
     plugins: [],

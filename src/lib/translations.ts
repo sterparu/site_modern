@@ -22,6 +22,7 @@ export const translations: Record<string, Record<Language, string>> = {
     'nav.competitie.program': { ro: 'Program', en: 'Schedule', de: 'Programm', fr: 'Programme', pt: 'Programa', el: 'Πρόγραμμα', es: 'Programa', hu: 'Program' },
     'nav.competitie.participanti': { ro: 'Participanți', en: 'Participants', de: 'Teilnehmende', fr: 'Participants', pt: 'Participantes', el: 'Συμμετέχοντες', es: 'Participantes', hu: 'Résztvevők' },
     'nav.competitie.inregistrare': { ro: 'Înregistrare', en: 'Registration', de: 'Anmeldung', fr: 'Inscription', pt: 'Inscrição', el: 'Εγγραφή', es: 'Inscripción', hu: 'Regisztráció' },
+    'nav.liveStream': { ro: 'Live Stream', en: 'Live Stream', de: 'Live Stream', fr: 'Live Stream', pt: 'Transmissão ao Vivo', el: 'Ζωντανή Μετάδοση', es: 'Transmisión en Vivo', hu: 'Élő Közvetítés' },
     'competitie.program.notice': {
         ro: '*Momentan calendarul competitional nu este disponibil, imediat ce vom avea toate detaliile acesta va fi afisat',
         en: '*Currently the competition calendar is not available, as soon as we have all the details it will be displayed',
