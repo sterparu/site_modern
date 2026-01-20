@@ -45,6 +45,17 @@ export default function CazarePage() {
                         </div>
                     </div>
 
+                    <div className="flex items-start gap-4">
+                        <div className="bg-green-50 p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p className="text-lg text-gray-700 font-bold">{t('accommodation.camper.price')}</p>
+                        </div>
+                    </div>
+
                     <div className="mt-8 pt-6 border-t border-gray-100">
                         <p className="text-gray-600 mb-4">{t('accommodation.camper.contact')}</p>
                         <Link href="/contact" className="inline-block bg-[#003d82] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#002a5c] transition-colors">
